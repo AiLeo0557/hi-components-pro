@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
 import ElementPlus from 'unplugin-element-plus/vite'
 import viteCompression from 'vite-plugin-compression';
+// import AutoImport from 'unplugin-auto-import/vite';
 
 export default defineConfig({
   plugins: [

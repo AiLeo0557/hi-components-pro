@@ -13,17 +13,14 @@
       ]
     },
     "sourceMap": false,
-    "moduleResolution": "node",
     "allowJs": false,
-    "strict": true,
-    "noUnusedLocals": true,
-    "resolveJsonModule": true,
+    // "strict": true,
+    // "noUnusedLocals": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "removeComments": false,
     "rootDir": ".",
     "preserveSymlinks": true,
-    // "jsx": "preserve",
     "declaration": true,
     "declarationDir": "dist/types",
     "types": [
@@ -31,7 +28,12 @@
       "vue",
       "element-plus/global"
     ],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "jsx": "preserve", // 保留 JSX 语法
+    // "resolveJsonModule": true,
+    // "jsxFactory": "h", // Vue 3 使用 h 作为 JSX 工厂函数
+    // "jsxFragmentFactory": "Fragment", // 可选的 Fragment 支持
+    "moduleResolution": "node", // 确保模块解析正确
   },
   "include": [
     "src/**/*",

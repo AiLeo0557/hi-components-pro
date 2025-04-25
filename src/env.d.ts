@@ -5,12 +5,12 @@ declare global {
     }
   }
 
-  namespace JSX {
-    interface IntrinsicAttributes {
-      class?: unknown
-      style?: unknown
-    }
-  }
+  // namespace JSX {
+  //   // interface IntrinsicAttributes {
+  //   //   class?: unknown
+  //   //   style?: unknown
+  //   // }
+  // }
 }
 declare module '*.vue' {
   import type { DefineComponent } from 'vue'

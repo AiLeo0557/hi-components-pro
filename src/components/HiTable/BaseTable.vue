@@ -1,5 +1,9 @@
 <script lang="ts" setup>
 import {ElTable, ElTableColumn, ElPagination} from 'element-plus'
+import 'element-plus/theme-chalk/src/table.scss'
+import 'element-plus/theme-chalk/src/table-column.scss'
+import 'element-plus/theme-chalk/src/pagination.scss'
+import 'element-plus/theme-chalk/src/scrollbar.scss'
 import {
   computed,
   defineOptions,

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ElInput } from "element-plus";
+import 'element-plus/theme-chalk/src/input.scss';
+
 defineOptions({
   name: "HiInput",
 });

@@ -1,10 +1,13 @@
 import { getFieldValueByPath } from "hi-utils-pro"
 import { computed, defineComponent, inject, reactive, ref, toRefs, useAttrs, Teleport } from "@vue/runtime-core"
 import { useElementMounted } from "hi-hooks"
-
+import { ElRadioGroup, ElRadioButton } from "element-plus"
+import 'element-plus/theme-chalk/src/radio.scss'
+import 'element-plus/theme-chalk/src/radio-group.scss'
 
 export default defineComponent({
   name: 'HiTableItem',
+  components: { ElRadioGroup, ElRadioButton },
   props: {
     page_state: {
       type: Object,

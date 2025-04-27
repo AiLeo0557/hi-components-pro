@@ -6,6 +6,8 @@ import {
   type HiTableConfig,
 } from 'hi-definitions'
 import { getRequestParams, useBusPost } from 'hi-http'
+import { ElButton } from 'element-plus'
+import 'element-plus/theme-chalk/src/button.scss'
 import {
   getFieldValueByPath,
   getStringBetween,

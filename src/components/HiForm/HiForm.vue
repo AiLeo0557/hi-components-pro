@@ -5,6 +5,10 @@ import { ref,
   unref,
   toRaw} from '@vue/runtime-core';
 import { type FormInstance, ElForm, ElFormItem, ElButton, ElRow,  } from 'element-plus';
+import 'element-plus/theme-chalk/el-form.css'
+import 'element-plus/theme-chalk/el-row.css'
+import 'element-plus/theme-chalk/el-col.css'
+import 'element-plus/theme-chalk/el-button.css'
 import { type HiFormItemOption, type FormElementOption } from 'hi-definitions';
 import HiFormItem from '../HiFormItem/HiFormItem.vue';
 defineOptions({

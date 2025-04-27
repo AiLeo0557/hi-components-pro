@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { type PropType, useAttrs, defineProps } from "@vue/runtime-core";
 import { ElDatePicker } from "element-plus";
+import 'element-plus/theme-chalk/src/date-picker.scss';
 import Season from "./Season.vue";
 defineOptions({
   name: "HiDate",

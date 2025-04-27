@@ -1,5 +1,9 @@
 <script lang="ts" setup>
 import { ElSelect, ElOption, ElCheckbox, type CheckboxValueType } from "element-plus";
+import "element-plus/theme-chalk/src/select.scss";
+import "element-plus/theme-chalk/src/option.scss";
+import "element-plus/theme-chalk/src/checkbox.scss";
+import "element-plus/theme-chalk/src/checkbox-group.scss";
 import {
   computed,
   ref,

@@ -1,0 +1,232 @@
+// import dark theme
+@use 'element-plus/theme-chalk/src/dark/css-vars.scss' as *;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+
+:root {
+  --hi-primary-gradient: linear-gradient(142deg, #55cdf3 4.5%, #1380ce 91.34%);
+}
+.hi-dialog .hi-button--primary,
+#app .hi-button--primary {
+  --hi-button-bg-color: #507ecd4d;
+  --hi-button-hover-bg-color: var(--hi-primary-gradient);
+  --hi-button-active-bg-color: var(--hi-primary-gradient);
+}
+.hi-dialog .hi-button--primary.height_light,
+#app .hi-button--primary.height_light {
+  // --hi-button-bg-color: var(--hi-primary-gradient)!important;
+  background: var(--hi-primary-gradient) !important;
+}
+.hi-dialog .hi-button,
+#app .hi-button {
+  padding: 5px 16px;
+  border: none;
+  box-shadow:
+    0 0.5px 2.5px 0 #0000001f,
+    0 0 0 0.5px #0000000d;
+}
+// #app .hi-button:not():hover,
+// #app .hi-button:not(.hi-button--text):focus {
+// }
+.hi-dialog .hi-button:not(.is-plain, .hi-button--text):hover,
+.hi-dialog .hi-button:not(.is-plain, .hi-button--text):focus,
+#app .hi-button:not(.is-plain, .hi-button--text):hover,
+#app .hi-button:not(.is-plain, .hi-button--text):focus {
+  background: var(--hi-button-active-bg-color);
+  box-shadow:
+    0 1px 2.5px 0 #3086f33d,
+    0 0 0 0.5px #3086f31f;
+}
+#app .hi-button.hi-button--text {
+  box-shadow: none;
+  padding: 0;
+  height: auto;
+}
+#app .hi-button.is-plain {
+  border: 1px solid rgba(0, 0, 0, 0);
+  color: #fff;
+}
+#app .hi-button.is-plain .hi-icon {
+  font-size: 16px;
+}
+#app .hi-button.is-plain:hover,
+#app .hi-button.is-plain:focus {
+  background: #507ecd33;
+  box-shadow:
+    0 1px 2.5px 0 #3086f33d,
+    0 0 0 0.5px #3086f31f;
+  border-color: #00c2fe;
+}
+#app .hi-form--inline .hi-select__wrapper {
+  box-shadow: none;
+}
+#app .hi-dialog {
+  padding: 0;
+  .hi-dialog__body {
+    padding: 16px;
+  }
+}
+.hi-date-range-picker {
+  --hi-datepicker-text-color: var(--hi-text-color-regular);
+  --hi-datepicker-off-text-color: var(--hi-text-color-placeholder);
+  --hi-datepicker-header-text-color: var(--hi-text-color-regular);
+  --hi-datepicker-icon-color: var(--hi-text-color-primary);
+  --hi-datepicker-border-color: var(--hi-disabled-border-color);
+  --hi-datepicker-inner-border-color: var(--hi-border-color-light);
+  --hi-datepicker-inrange-bg-color: var(--hi-border-color-extra-light);
+  --hi-datepicker-inrange-hover-bg-color: var(--hi-border-color-extra-light);
+  --hi-datepicker-active-color: var(--hi-color-primary);
+  --hi-datepicker-hover-text-color: var(--hi-color-primary);
+}
+.hi-dropdown-menu {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+.hi-dropdown__popper.hi-popper,
+.hi-dropdown__popper.hi-popper .hi-popper__arrow::before {
+  border: 1px solid #286caba1 !important;
+  background: linear-gradient(
+    180deg,
+    #00192ae6 -5.31%,
+    #00192ae6 -5.3%,
+    #05395ee6 94.22%
+  ) !important;
+}
+.hi-popper__arrow {
+  height: 5px !important;
+  overflow: hidden;
+}
+.hi-dropdown-menu__item:not(.is-disabled):focus {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+body {
+  font-family: Inter, system-ui, Avenir, 'Helvetica Neue', Helvetica, 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+// a {
+//   color: var(--ep-color-primary);
+// }
+
+// code {
+//   border-radius: 2px;
+//   padding: 2px 4px;
+//   background-color: var(--ep-color-primary-light-9);
+//   color: var(--ep-color-primary);
+// }
+
+// .hi-popper.is-dark {
+//   background: #112646;
+//   color: #ffffff;
+//   border-color: #1f9acf;
+// }
+
+.hi-popper[data-popper-placement^='left'] > .hi-popper__arrow {
+  height: 10px !important;
+  right: -5px;
+  width: 5px !important;
+}
+.hi-popper[data-popper-placement^='right'] > .hi-popper__arrow {
+  height: 10px !important;
+  left: -5px;
+  width: 5px !important;
+}
+.hi-popper[data-popper-placement^='top'] > .hi-popper__arrow {
+  height: 5px !important;
+  bottom: -5px;
+  width: 10px !important;
+}
+.hi-popper[data-popper-placement^='top'] > .hi-popper__arrow::before {
+  top: -5px;
+}
+.hi-popper[data-popper-placement^='bottom'] > .hi-popper__arrow {
+  height: 5px !important;
+  top: -5px;
+  width: 10px !important;
+}
+.hi-popper[data-popper-placement^='right'] > .hi-popper__arrow::before {
+  right: -5px;
+}
+.hi-loading-mask {
+  background-color: rgb(0 29 53 / 85%) !important;
+  backdrop-filter: blur(2px);
+  // filter: blur(5px);
+}
+#app .hi-button.table-cell-con {
+  padding: 0 !important;
+  height: auto !important;
+}
+#app .hi-button.table-cell-con:hover,
+#app .hi-button.table-cell-con:focus {
+  background: none !important;
+  font-weight: bold !important;
+}
+* {
+  scrollbar-color: var(--hi-scrollbar-bg-color) var(--hi-fill-color-light);
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #0003;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background-color: #0000004d;
+}
+.hi-transfer__buttons {
+  width: 162px;
+}
+// .hi-transfer__button,
+.hi-transfer__move-top,
+.hi-transfer__move-bottom {
+  padding: 0;
+  height: 32px;
+  width: 32px;
+}
+.hi-transfer__move-top {
+  // margin-bottom: 10px;
+}
+.hi-transfer__move-bottom {
+  margin-top: -4px;
+}
+.hi-transfer-panel .hi-transfer-panel__footer {
+  background: #112646 !important;
+}
+.hi-select,
+.hi-date-editor.hi-input,
+.hi-date-editor.hi-input__wrapper {
+  flex-grow: 1;
+}
+.hi-tree-node.is-current > .hi-tree-node__content,
+.hi-tree-node.is-checked > .hi-tree-node__content {
+  background-color: var(--hi-tree-node-hover-bg-color);
+}
+.hi-table thead.is-group th.hi-table__cell {
+  background: var(--hi-table-header-bg-color) !important;
+}
+.hi-form-item--default {
+  margin-bottom: 0px !important;
+}
+.hi-input-more-option-poper {
+  display: none !important;
+}

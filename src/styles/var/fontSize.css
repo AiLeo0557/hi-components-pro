@@ -1,0 +1,16 @@
+:root {
+  --defaultFontSize: {
+    font:
+      12px/150% 'Source Han Sans CN',
+      'Helvetica Neue',
+      Helvetica,
+      'PingFang SC',
+      'Hiragino Sans GB',
+      'Microsoft YaHei',
+      '微软雅黑',
+      Arial,
+      sans-serif,
+      '\5b8b\4f53';
+    font-weight: normal;
+  };
+}

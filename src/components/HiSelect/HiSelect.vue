@@ -256,3 +256,32 @@ const [label_key, value_key] = props!.options!.alias || ["label", "value"];
     />
   </el-select>
 </template>
+<style lang="scss" scoped>
+@use '~/styles/mixins.scss' as *;
+.select {
+  // @include use-height(16px);
+  overflow: hidden;
+}
+/**.select:deep(.hi-input__wrapper),
+.select:deep(.hi-input__inner),
+.select:deep(.select-trigger)  */
+.select:deep(.hi-tag__content),
+.select:deep(.hi-tag),
+.select:deep(.hi-select-tags-wrapper) {
+  @include use-height(16px);
+}
+.select:deep(.hi-tag) {
+  border: none;
+  margin: 0;
+  padding: 0 6px;
+}
+.select:deep(.hi-tag + .hi-tag) {
+  margin-left: 6px;
+}
+
+.select:deep(.hi-select__tags) {
+  @include use-height(16px);
+  top: 1px;
+  transform: translateY(0);
+}
+</style>

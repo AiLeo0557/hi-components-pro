@@ -1,0 +1,23 @@
+@mixin use-flex-layout($direction: column) {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  flex-direction: $direction;
+}
+@mixin use-flex-row($align-item: center, $justify-content: center) {
+  display: flex;
+  flex-direction: row;
+  align-items: $align-item;
+  justify-content: $justify-content;
+}
+@mixin use-flex-basis($flex-basis, $attr: width) {
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: $flex-basis;
+  $attr: $flex-basis;
+  overflow: hidden;
+}
+@mixin use-height($height) {
+  height: $height;
+  line-height: $height;
+}

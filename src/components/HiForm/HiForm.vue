@@ -209,3 +209,103 @@ const haddleShow = () => {
     </hi-dialog>
   </div>
 </template>
+<style lang="scss" scoped>
+@use '~/styles/mixins.scss' as *;
+.form_wrap {
+  width: 100%;
+}
+.form_wrap .hi-form--inline {
+  margin-right: -16px;
+}
+.form_wrap .hi-form .hi-row {
+  // @include use-height(32px);
+  line-height: 32px;
+  display: flex;
+}
+.form_wrap .hi-form.hi-form--inline .hi-row {
+  flex-wrap: nowrap;
+}
+.form_wrap .hi-form .hi-row .hi-col {
+  flex-shrink: 1 !important;
+}
+.form_wrap .hi-form .hi-row.last-row {
+  display: flex;
+  justify-content: end;
+  padding-right: 16px;
+}
+.form_wrap .hi-form .hi-row + .hi-row {
+  margin-top: 10px;
+}
+// .form_wrap:deep(.hi-form--inline) {}
+.form_wrap:deep(.hi-form--inline .hi-row) {
+  width: 100%;
+}
+.form_wrap:deep(.hi-form--inline .hi-form-item) {
+  margin: 0;
+}
+.form_wrap:deep(.hi-form--inline .hi-form-item:not(.btn-group)) {
+  height: 32px;
+  padding: 6px 12px;
+  padding-right: 0;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border-radius: 4px;
+  flex: 1 0 0;
+  border: 1px solid var(--hi-border-color);
+}
+.form_wrap:deep(.hi-form--inline .hi-form-item.is-error) {
+  border: 1px solid var(--hi-color-error);
+}
+.form_wrap:deep(.hi-form--inline .hi-form-item__label) {
+  color: var(--hi-text-color-primary);
+  padding: 0;
+  @include use-height(20px);
+}
+.form_wrap:deep(.hi-form--inline .hi-form-item__content) {
+  @include use-height(32px);
+  overflow: hidden;
+  position: relative;
+}
+.form_wrap:deep(.hi-form--inline .hi-form-item__content input) {
+  width: 100%;
+  background: none !important;
+  border: none !important;
+  outline-style: none !important;
+  color: var(--hi-text-color-primary);
+}
+.form_wrap:deep(.hi-form--inline .hi-form-item__content input::-webkit-input-placeholder) {
+  color: var(--hi-text-color-placeholder);
+}
+.form_wrap:deep(.hi-form--inline .hi-form-item:not(.btn-group) .hi-form-item__content::before) {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 2px;
+  height: 16px;
+  background: #1f9acf;
+  left: 0;
+  top: 8px;
+}
+.form_wrap:deep(.hi-form--inline .hi-input) {
+  --hi-input-height: 20px;
+}
+.form_wrap:deep(.hi-form--inline .hi-input__wrapper.is-focus),
+.form_wrap:deep(.hi-form--inline .hi-input__wrapper) {
+  box-shadow: none !important;
+  background: none !important;
+  outline-style: none !important;
+}
+.btn-group {
+  // @include use-flex-basis(140px);
+  padding-left: 8px;
+  flex: 1;
+  display: flex;
+}
+.btn-group:deep(.hi-form-item__content) {
+  display: flex;
+}
+.form_wrap:deep(.hi-form--inline .hi-date-editor) {
+  @include use-height(20px);
+}
+</style>

@@ -1,0 +1,32 @@
+:root {
+  /* color */
+  --black: #141414;
+  --white: #f3f3f3;
+  --red: #f56c6c; /*错误*/
+  --blue: #409eff; /*常规*/
+  --origin: #e6a23c; /*警告*/
+  --green: #67c23a; /*成功*/
+  --main-green: #14b5b5;
+  --main-blue: #19aae6;
+  --main-gray: #8c8c8c;
+  --main-origin: #fc7141;
+  --gray: #909399;
+  --gray_light: #e5e5e5;
+  --gray_darker: #666;
+  --gray_dark: #999;
+  /* default colors */
+  --mainText_color: #434343; /*主要文字*/
+  --routineText_color: #606266; /*常规文字*/
+  --secondaryText_color: #909399; /*次要文字*/
+  --oneLevelBorder_color: #dcdfe6; /*一级边框*/
+  --twoLevelBorder_color: #e4e7ed; /*二级边框*/
+  --threeLevelBorder_color: #ebeef5; /*三级边框*/
+  --active_color: #e8e8e8;
+  /* background */
+  --background_color: #f2f2f2; /*默认背景色*/
+  --primary_color: #009c84; /*主色调*/
+  --pure_white: #fff;
+  --common_hover: rgb(16, 145, 125);
+  --light_green: #dff5ee;
+  --black-green: #066d5d;
+}

@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { getFormatNum } from 'hi-utils-pro';
 import {isString} from 'hi-datatype-operation';
-import { useAttrs } from 'element-plus';
+import { ElIcon, ElTableColumn } from 'element-plus';
+import {useAttrs} from 'vue'
 const attrs = useAttrs()
 const { label, subColumns, numFormat: num }: any = attrs
 </script>

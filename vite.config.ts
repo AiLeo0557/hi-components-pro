@@ -3,8 +3,9 @@ import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
 import ElementPlus from 'unplugin-element-plus/vite'
 import viteCompression from 'vite-plugin-compression';
+const { resolve } = require('path')
 // import AutoImport from 'unplugin-auto-import/vite';
-
+const pathSrc = resolve(__dirname, 'src')
 export default defineConfig({
   plugins: [
     vue(),
@@ -66,6 +67,18 @@ export default defineConfig({
           'vue-router': 'vueRouter',
         }
       }
+    }
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "~/styles/element/index.scss" as *;`
+      }
+    }
+  },
+  resolve: {
+    alias: {
+      '~': `${pathSrc}`,
     }
   }
 })

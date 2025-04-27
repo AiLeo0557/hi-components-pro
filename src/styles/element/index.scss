@@ -1,0 +1,72 @@
+$--colors: (
+  'primary': (
+    'base': #00c2fe
+  ),
+  'success': (
+    'base': #21ba45
+  ),
+  'warning': (
+    'base': #f2711c
+  ),
+  'danger': (
+    'base': #db2828
+  ),
+  'error': (
+    'base': #db2828
+  ),
+  'info': (
+    'base': #00c2fe
+  )
+);
+// --hi-text-color-placeholder
+$--text-color: (
+  'primary': #ffffffff,
+  'regular': #ffffffcc,
+  'placeholder': #ffffff59
+);
+$--button: (
+  'hover-link-text-color': #00c2fe
+);
+$--fill-color: (
+  'blank': none,
+  // 'light': #00c2fe,
+  'light': #1971f5
+);
+$--border-color: (
+  '': #1f9acf,
+  'lighter': #1f9acf,
+  'light': #286caba1,
+  'extra-light': #286caba1
+);
+$--bg-color: (
+  '': #112646,
+  'overlay': linear-gradient(180deg, #00192ae6 -5.31%, #00192ae6 -5.3%, #05395ee6 94.22%)
+);
+// we can add this to custom namespace, default is 'el'
+@forward 'element-plus/theme-chalk/src/mixins/config.scss' with (
+  $namespace: 'hi'
+);
+// --hi-datepicker-inrange-bg-color
+// --hi-border-color-extra-light
+
+// You should use them in scss, because we calculate it by sass.
+// comment next lines to use default color
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  // do not use same name, it will override.
+  $colors: $--colors,
+  $text-color: $--text-color,
+  $button: $--button,
+  $bg-color: $--bg-color,
+  $fill-color: $--fill-color,
+  $border-color: $--border-color,
+  $button-padding-horizontal: ('default': 50px)
+);
+
+// if you want to import all
+// @use "element-plus/theme-chalk/src/index.scss" as *;
+
+// You can comment it to hide debug info.
+// @debug $--colors;
+
+// custom dark variables
+@use './dark.scss';

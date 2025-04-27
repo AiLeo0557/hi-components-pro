@@ -18,12 +18,6 @@ defineOptions({
 // const props = defineProps({
 //   ...inputProps,
 // });
-
-// 透传所有 Element-Button 的功能
-defineOptions({
-  name: "HiInput",
-  // inheritAttrs: false,
-});
 </script>
 
 <template>

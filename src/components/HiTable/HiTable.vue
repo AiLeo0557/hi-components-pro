@@ -11,7 +11,7 @@ defineExpose({
     <slot></slot>
     <base-table ref="baseTableRef" v-bind="$attrs" />
   </div>
-  <base-table-pagination :index="$attrs.index" v-if="!$attrs?.pagination_config?.hidden" />
+  <base-table-pagination :index="$attrs.index" v-if="!($attrs?.pagination_config as any).hidden" />
 </template>
 <!-- <style lang="scss" scoped>
 @use '~/styles/mixins' as *;

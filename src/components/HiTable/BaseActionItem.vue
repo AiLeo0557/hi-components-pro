@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import { ElButton } from 'element-plus'
 import 'element-plus/theme-chalk/src/button.scss'
 </script>

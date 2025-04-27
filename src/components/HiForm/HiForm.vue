@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import { type FormInstance, ElForm, ElFormItem, ElButton, ElRow,  } from 'element-plus';
 import 'element-plus/theme-chalk/src/form.scss';
 import 'element-plus/theme-chalk/src/row.scss';

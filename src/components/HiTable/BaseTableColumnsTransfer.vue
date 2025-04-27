@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 interface RemoteColumnOption {
   id: string
   columnCn: string

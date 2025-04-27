@@ -1,6 +1,9 @@
+<script lang="ts">
+import { ElTable } from 'element-plus'
+import 'element-plus/theme-chalk/src/table.scss'
+</script>
 <script lang="ts" setup>
 import { ref,defineEmits,defineProps, PropType } from '@vue/runtime-core'
-import { ElTable } from 'element-plus'
 const props = defineProps({
   tableData: {
     type: Array as PropType<any>,

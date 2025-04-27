@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 interface RemoteColumnOption {
   id: string
   columnCn: string
@@ -17,8 +17,6 @@ interface RemoteColumnOption {
   sortNum: string
 }
 </script>
-
-
 <script lang="ts" setup>
 import { computed, onMounted, PropType, reactive, ref, toRaw, unref, watch } from '@vue/runtime-core'
 import { type HiTableColElOptions } from 'hi-definitions'

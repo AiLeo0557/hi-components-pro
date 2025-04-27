@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import { ElButton, ElMessage, type UploadUserFile } from 'element-plus'
 import 'element-plus/theme-chalk/src/button.scss'
 import 'element-plus/theme-chalk/src/upload.scss'

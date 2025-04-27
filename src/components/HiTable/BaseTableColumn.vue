@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import { ElIcon, ElTableColumn } from 'element-plus';
 import 'element-plus/theme-chalk/src/table-column.scss';
 import 'element-plus/theme-chalk/src/icon.scss';

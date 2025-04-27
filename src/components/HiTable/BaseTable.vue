@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import {ElTable, ElTableColumn, ElPagination} from 'element-plus'
 import 'element-plus/theme-chalk/src/table.scss'
 import 'element-plus/theme-chalk/src/table-column.scss'

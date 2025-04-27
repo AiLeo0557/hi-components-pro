@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import {dayjs, ElCol, ElFormItem} from "element-plus";
 import 'element-plus/theme-chalk/src/form-item.scss';
 import 'element-plus/theme-chalk/src/col.scss';

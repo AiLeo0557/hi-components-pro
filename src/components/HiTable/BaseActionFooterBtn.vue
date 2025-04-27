@@ -1,9 +1,11 @@
+<script lang="ts">
+import { ElButton } from 'element-plus'
+import 'element-plus/theme-chalk/src/button.scss'
+</script>
 <script lang="ts" setup>
 import { useBusPost } from 'hi-http'
 import { getFieldValueByPath } from 'hi-utils-pro'
 import { useAttrs, defineProps, defineEmits } from '@vue/runtime-core'
-import { ElButton } from 'element-plus'
-import 'element-plus/theme-chalk/src/button.scss'
 const props = defineProps({
   formData: Object
 })

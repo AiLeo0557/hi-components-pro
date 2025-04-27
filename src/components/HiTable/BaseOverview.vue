@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import { ElTooltip } from 'element-plus'
 import 'element-plus/theme-chalk/src/tooltip.scss'
 </script>

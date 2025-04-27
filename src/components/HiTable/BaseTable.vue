@@ -4,6 +4,21 @@ import 'element-plus/theme-chalk/src/table.scss'
 import 'element-plus/theme-chalk/src/table-column.scss'
 import 'element-plus/theme-chalk/src/pagination.scss'
 import 'element-plus/theme-chalk/src/scrollbar.scss'
+interface HiPaginationConfig {
+  page_current: number
+  page_size: number
+  page_sizes: number[]
+  current_name: string
+  size_name: string
+  pagination_hidden: boolean
+  hidden: boolean
+}
+type HiPaginationParam = [
+  number,
+  number,
+  string,
+  string
+]
 </script>
 <script lang="ts" setup>
 import {
@@ -21,21 +36,7 @@ import {
 } from '@vue/runtime-core'
 import { HiTableActionConfig, type HiTableDataConfig } from 'hi-definitions'
 import {useElementMounted, useState, useTableData} from 'hi-hooks'
-interface HiPaginationConfig {
-  page_current: number
-  page_size: number
-  page_sizes: number[]
-  current_name: string
-  size_name: string
-  pagination_hidden: boolean
-  hidden: boolean
-}
-type HiPaginationParam = [
-  number,
-  number,
-  string,
-  string
-]
+
 defineOptions({
   inheritAttrs: false
 })

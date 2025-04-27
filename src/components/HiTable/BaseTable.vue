@@ -205,7 +205,7 @@ const calcTableHight = () => {
     })
   }
 }
-const onReload = useTableData(props.data_config, pagination_param, (res: any) => {
+const onReload = useTableData(props.data_config as any, pagination_param, (res: any) => {
   // 默认勾选
   nextTick(() => {
     tableData.value = res.data

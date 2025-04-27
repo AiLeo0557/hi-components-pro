@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import {ElTable, ElTableColumn, ElPagination} from 'element-plus'
 import {
   computed,
   defineOptions,

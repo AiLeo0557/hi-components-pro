@@ -4,7 +4,7 @@ import { ref,
   defineProps, PropType, inject, reactive, useAttrs, computed, 
   unref,
   toRaw} from '@vue/runtime-core';
-import { type FormInstance } from 'element-plus';
+import { type FormInstance, ElForm, ElFormItem, ElButton, ElRow,  } from 'element-plus';
 import { type HiFormItemOption, type FormElementOption } from 'hi-definitions';
 import HiFormItem from '../HiFormItem/HiFormItem.vue';
 defineOptions({

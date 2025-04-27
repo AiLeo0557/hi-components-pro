@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { getFormatNum } from 'hi-utils-pro'
+import { getFormatNum } from 'hi-utils-pro';
+import {isString} from 'hi-datatype-operation';
 import { useAttrs } from 'element-plus';
 const attrs = useAttrs()
 const { label, subColumns, numFormat: num }: any = attrs
@@ -16,7 +17,7 @@ const { label, subColumns, numFormat: num }: any = attrs
         {{ scope.column.label }}
       </template>
       <el-tooltip
-        v-if="$attrs.tip"
+        v-if="isString($attrs.tip)"
         class="box-item"
         effect="dark"
         :content="$attrs.tip"

@@ -1,14 +1,19 @@
+<script>
+import { type FormInstance, ElForm, ElFormItem, ElButton, ElRow,  } from 'element-plus';
+import 'element-plus/theme-chalk/src/form.scss';
+import 'element-plus/theme-chalk/src/row.scss';
+import 'element-plus/theme-chalk/src/button.scss';
+import 'element-plus/theme-chalk/src/col.scss';
+</script>
 <script lang="ts" setup>
-import { ref, 
+import {
+  ref, 
   defineExpose,
   defineProps, PropType, inject, reactive, useAttrs, computed, 
   unref,
-  toRaw} from '@vue/runtime-core';
-import { type FormInstance, ElForm, ElFormItem, ElButton, ElRow,  } from 'element-plus';
-import 'element-plus/theme-chalk/el-form.css'
-import 'element-plus/theme-chalk/el-row.css'
-import 'element-plus/theme-chalk/el-col.css'
-import 'element-plus/theme-chalk/el-button.css'
+  toRaw
+} from '@vue/runtime-core';
+
 import { type HiFormItemOption, type FormElementOption } from 'hi-definitions';
 import HiFormItem from '../HiFormItem/HiFormItem.vue';
 defineOptions({

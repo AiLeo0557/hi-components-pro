@@ -1,9 +1,12 @@
+<script>
+import { ElTooltip } from 'element-plus'
+import 'element-plus/theme-chalk/src/tooltip.scss'
+</script>
 <script lang="ts" setup>
 import { useBusPost, getRequestParams } from 'hi-http'
 import { getFieldValueByPath, getFormatNum, getStringBetween } from 'hi-utils-pro'
 import { computed, inject, onMounted, reactive, ref, useAttrs, watch } from '@vue/runtime-core'
-import { ElTooltip } from 'element-plus'
-import 'element-plus/theme-chalk/src/tooltip.scss'
+
 const props = defineProps({
   tableDataParam: Object,
   overviewData: {

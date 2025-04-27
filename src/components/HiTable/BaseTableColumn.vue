@@ -1,9 +1,12 @@
-<script lang="ts" setup>
-import { getFormatNum } from 'hi-utils-pro';
-import {isString} from 'hi-datatype-operation';
+<script>
 import { ElIcon, ElTableColumn } from 'element-plus';
 import 'element-plus/theme-chalk/src/table-column.scss';
 import 'element-plus/theme-chalk/src/icon.scss';
+</script>
+<script lang="ts" setup>
+import { getFormatNum } from 'hi-utils-pro';
+import {isString} from 'hi-datatype-operation';
+
 import {useAttrs} from 'vue'
 const attrs = useAttrs()
 const { label, subColumns, numFormat: num }: any = attrs

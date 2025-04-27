@@ -1,8 +1,10 @@
+<script>
+import {dayjs, ElCol, ElFormItem} from "element-plus";
+import 'element-plus/theme-chalk/src/form-item.scss';
+import 'element-plus/theme-chalk/src/col.scss';
+</script>
 <script lang="ts" setup>
 import { computed, defineEmits, onMounted, watch } from "@vue/runtime-core";
-import {dayjs, ElCol, ElFormItem} from "element-plus";
-import 'element-plus/theme-chalk/el-form-item.css'
-import 'element-plus/theme-chalk/el-col.css'
 import duration from 'dayjs/plugin/duration'
 import {calc} from 'hi-calc-pro';
 import { getFieldValueByPath } from "hi-utils-pro";

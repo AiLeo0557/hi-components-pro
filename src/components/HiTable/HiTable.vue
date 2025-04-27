@@ -16,7 +16,7 @@ defineExpose({
   </div>
   <base-table-pagination :index="$attrs.index" v-if="!($attrs?.pagination_config as any).hidden" />
 </template>
-<!-- <style lang="scss" scoped>
+<style lang="scss" scoped>
 @use '~/styles/mixins' as *;
 .table-with-map-wrapper {
   flex: 1;
@@ -114,4 +114,4 @@ defineExpose({
 .pagination-wrapper:deep(.hi-pagination .hi-select) {
   --hi-select-border-color-hover: var(--hi-border-color);
 }
-</style> -->
+</style>

@@ -1,6 +1,7 @@
 import { defineComponent, ref, toRefs, useAttrs, watch } from "@vue/runtime-core"
 
 export default defineComponent({
+  name: 'HiTableGroup',
   props: {
     formData: Object
   },

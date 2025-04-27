@@ -4,6 +4,7 @@ import { useElementMounted } from "hi-hooks"
 
 
 export default defineComponent({
+  name: 'HiTableItem',
   props: {
     page_state: {
       type: Object,

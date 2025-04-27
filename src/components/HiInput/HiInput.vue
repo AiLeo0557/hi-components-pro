@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { ElInput } from "element-plus";
+defineOptions({
+  name: "HiInput",
+});
 // import { buttonProps } from "element-plus/es/components/button/src/button";
 
 // 继承 Element-Button 的所有 Props

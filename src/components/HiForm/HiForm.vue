@@ -7,7 +7,9 @@ import { ref,
 import { type FormInstance } from 'element-plus';
 import { type HiFormItemOption, type FormElementOption } from 'hi-definitions';
 import HiFormItem from '../HiFormItem/HiFormItem.vue';
-
+defineOptions({
+  name: 'HiForm'
+})
 const formRef = ref<FormInstance>()
 const props = defineProps({
   showSearchBtn: {

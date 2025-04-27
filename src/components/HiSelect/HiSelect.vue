@@ -13,7 +13,9 @@ import { getFieldValueByPath } from "hi-utils-pro";
 import { useBusPost, useBusGet, getRequestParams } from "hi-http"; //
 import { SelectProps } from "element-plus/es/components/select/src/select";
 import { isUndefined, isStrictObject } from "hi-datatype-operation";
-
+defineOptions({
+  name: "HiSelect",
+});
 const props = defineProps({
   ...SelectProps,
   modelValue: {

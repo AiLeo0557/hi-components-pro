@@ -6,6 +6,9 @@ import {calc} from 'hi-calc-pro';
 import { getFieldValueByPath } from "hi-utils-pro";
 import { useBusPost, getRequestParams } from "hi-http";
 
+defineOptions({
+  name: "HiFormItem"
+})
 dayjs.extend(duration)
 
 const props = defineProps({

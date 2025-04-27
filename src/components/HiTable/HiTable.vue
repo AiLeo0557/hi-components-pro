@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { ref, defineExpose } from '@vue/runtime-core';
-
+defineOptions({
+  name: 'HiTable'
+})
 const baseTableRef = ref<any>(null)
 defineExpose({
   baseTableRef
 })
+
 </script>
 <template>
   <div class="table-with-map-wrapper">

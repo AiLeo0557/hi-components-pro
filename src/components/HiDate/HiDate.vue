@@ -2,7 +2,9 @@
 import { type PropType, useAttrs, defineProps } from "@vue/runtime-core";
 import { ElDatePicker } from "element-plus";
 import Season from "./Season.vue";
-
+defineOptions({
+  name: "HiDate",
+});
 interface DateFormConfig {
   disabledDateStartKey?: string;
   disabledDateEndKey?: string;

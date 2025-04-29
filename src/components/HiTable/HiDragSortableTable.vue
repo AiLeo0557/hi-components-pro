@@ -1,6 +1,7 @@
 <script lang="ts">
-import { ElTable } from 'element-plus'
+import { ElTable, ElTableColumn} from 'element-plus'
 import 'element-plus/theme-chalk/src/table.scss'
+import 'element-plus/theme-chalk/src/table-column.scss'
 </script>
 <script lang="ts" setup>
 import { ref,defineEmits,defineProps, PropType } from '@vue/runtime-core'

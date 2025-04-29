@@ -1,5 +1,6 @@
 import { defineComponent, ref, toRefs, useAttrs, watch } from "@vue/runtime-core"
 import { ElScrollbar, ElTabs, ElTabPane } from "element-plus"
+import HiTableItem from "./HiTableItem"
 import 'element-plus/theme-chalk/src/tabs.scss'
 import 'element-plus/theme-chalk/src/tab-pane.scss'
 import 'element-plus/theme-chalk/src/scrollbar.scss'
@@ -8,7 +9,7 @@ export default defineComponent({
   props: {
     formData: Object
   },
-  components: { ElScrollbar, ElTabs, ElTabPane },
+  components: { ElScrollbar, ElTabs, ElTabPane, HiTableItem },
   setup(props, ctx) {
     const { formData } = toRefs(props)
     // const pageStore = usePageStore()

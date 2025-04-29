@@ -2,12 +2,14 @@ import { getFieldValueByPath } from "hi-utils-pro"
 import { computed, defineComponent, inject, reactive, ref, toRefs, useAttrs, Teleport } from "@vue/runtime-core"
 import { useElementMounted } from "hi-hooks"
 import { ElRadioGroup, ElRadioButton } from "element-plus"
+import HiForm from "../HiForm/HiForm.vue"
+import HiTable from "./HiTable.vue"
 import 'element-plus/theme-chalk/src/radio.scss'
 import 'element-plus/theme-chalk/src/radio-group.scss'
 
 export default defineComponent({
   name: 'HiTableItem',
-  components: { ElRadioGroup, ElRadioButton },
+  components: { ElRadioGroup, ElRadioButton, HiForm, HiTable },
   props: {
     page_state: {
       type: Object,
@@ -46,7 +48,6 @@ export default defineComponent({
       actions_items_space
     }: any = tableConfig
     const sub_label_str = computed(() => {
-      console.log('props:', props)
       if (props.sub_label?.includes('{{')) {
         return props.sub_label.replace(/{{(.*?)}}/g, (_: any, title_key: string) => {
           title_key = getFieldValueByPath(title_key, props)

@@ -68,7 +68,6 @@ const handleDownload = () => {
     responseType: 'blob',
     params_type: download_template_params_type
   }).then((data: any) => {
-    console.log(64, data)
     const blob = new Blob([data])
     const a = document.createElement('a')
     const parenrTag = document.getElementById('app')

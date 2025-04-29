@@ -6,6 +6,9 @@ const { configs }: any = useAttrs()
 const [formData, formItems] = defineHiFormItems(configs.items)
 defineExpose({ formData })
 </script>
+<script lang="ts">
+import HiFrom from '../HiForm/HiForm.vue'
+</script>
 <template>
   <hi-form
     :inline="false"

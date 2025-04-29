@@ -18,7 +18,19 @@ interface RemoteColumnOption {
 }
 </script>
 <script lang="ts" setup>
-import { computed, onMounted, PropType, reactive, ref, toRaw, unref, watch } from '@vue/runtime-core'
+import {
+  computed,
+  onMounted,
+  PropType,
+  reactive,
+  ref,
+  toRaw,
+  unref,
+  watch,
+  defineProps,
+  defineExpose,
+  Teleport,
+} from '@vue/runtime-core'
 import { type HiTableColElOptions } from 'hi-definitions'
 import { useElementMounted } from 'hi-hooks'
 import { type HiRequestArgument, useBusPost } from 'hi-http'
@@ -148,6 +160,9 @@ const handleConfirm = () => {
 }
 </script>
 <!-- v-fix-width -->
+<script lang="ts">
+import BaseTableColumn from './BaseTableColumn.vue'
+</script>
 <template>
   <base-table-column :key="item.prop" v-bind="item" v-for="item in columns"></base-table-column>
   <Teleport v-if="isTableActionsAreaMounted" to="#tableActionsArea">

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, defineExpose } from '@vue/runtime-core';
-import BaseTable from './BaseTable.vue'
 defineOptions({
   name: 'HiTable'
 })
@@ -8,7 +7,10 @@ const baseTableRef = ref<any>(null)
 defineExpose({
   baseTableRef
 })
-
+</script>
+<script lang="ts">
+import BaseTable from './BaseTable.vue';
+import BaseTablePagination from './BaseTablePagination.vue';
 </script>
 <template>
   <div class="table-with-map-wrapper">

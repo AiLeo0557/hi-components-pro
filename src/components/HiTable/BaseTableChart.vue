@@ -553,10 +553,8 @@ const createSeries = (
     }
     if (_type === 'columns') {
       series = chart.series.push(ColumnSeries.new(root, s_config))
-      console.log('series:', series)
       // if (stacked) {
       //   const tooltip = Tooltip.new(root, {})
-
       //   chart.plotContainer.set('tooltipPosition', 'pointer')
       //   chart.plotContainer.set('tooltipText', 'a')
       //   chart.plotContainer.set('tooltip', tooltip)
@@ -654,6 +652,13 @@ const table_columns_config = computed(() => {
     align
   }))
 })
+</script>
+<script lang="ts">
+import DataChartTop from '../HiChart/DataChartTop.vue'
+import DataChartFlow from '../HiChart/DataChartFlow.vue'
+import { ElTable, ElTableColumn } from 'element-plus'
+import 'element-plus/theme-chalk/src/table.scss'
+import 'element-plus/theme-chalk/src/table-column.scss'
 </script>
 <template>
   <div

@@ -1,9 +1,10 @@
 <script lang="ts">
-import {ElTable, ElTableColumn, ElPagination} from 'element-plus'
+import {ElTable, ElTableColumn, ElRadio, ElPagination} from 'element-plus'
 import 'element-plus/theme-chalk/src/table.scss'
 import 'element-plus/theme-chalk/src/table-column.scss'
 import 'element-plus/theme-chalk/src/pagination.scss'
 import 'element-plus/theme-chalk/src/scrollbar.scss'
+import 'element-plus/theme-chalk/src/radio.scss'
 interface HiPaginationConfig {
   page_current: number
   page_size: number
@@ -270,6 +271,11 @@ const handleSelectionChange = (row: any) => {
   selectedTableData.value = [row]
 }
 // console.log('attrs:', useAttrs())
+</script>
+<script lang="ts">
+import BaseTableChart from './BaseTableChart.vue'
+import BaseActionItem from './BaseActionItem.vue'
+import BaseView from './BaseView.vue'
 </script>
 <template>
   <Teleport v-if="isTableChartAreaMounted && props.chart_config" to="#tableChartArea">

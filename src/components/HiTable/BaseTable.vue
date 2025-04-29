@@ -1,4 +1,7 @@
 <script lang="ts">
+import BaseTableChart from './BaseTableChart.vue'
+import BaseActionItem from './BaseActionItem.vue'
+import BaseOverview from './BaseOverview.vue'
 import {ElTable, ElTableColumn, ElRadio, ElPagination} from 'element-plus'
 import 'element-plus/theme-chalk/src/table.scss'
 import 'element-plus/theme-chalk/src/table-column.scss'
@@ -271,11 +274,6 @@ const handleSelectionChange = (row: any) => {
   selectedTableData.value = [row]
 }
 // console.log('attrs:', useAttrs())
-</script>
-<script lang="ts">
-import BaseTableChart from './BaseTableChart.vue'
-import BaseActionItem from './BaseActionItem.vue'
-import BaseView from './BaseView.vue'
 </script>
 <template>
   <Teleport v-if="isTableChartAreaMounted && props.chart_config" to="#tableChartArea">

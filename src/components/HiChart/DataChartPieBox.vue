@@ -1,21 +1,19 @@
 <script lang="ts">
 import DataChartPie from './DataChartPie.vue';
 import IconPointer from '../HiIcon/IconPointer.vue';
+import {defineOptions, PropType} from '@vue/runtime-core'
+defineOptions({
+  name: 'DataChartPieBox'
+})
 </script>
 <script lang="ts" setup>
 import { getFormatNum } from 'hi-utils-pro';
 
 const colors = ['#397DD3', '#5FBA99', '#8C8DD1', '#5BBDCB', '#379689', '#87D5E0']
 defineProps({
-  items: Array
+  items: Array as PropType<{label: string, value: number, format?: number}[]>,
 })
 const doFormat = (value: number) => getFormatNum(value, 4)
-</script>
-<script lang="ts">
-  import {defineOptions} from '@vue/runtime-core'
-  defineOptions({
-    name: 'DataChartPieBox'
-  })
 </script>
 <template>
   <main class="data-chart-pie-box">

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, defineExpose } from '@vue/runtime-core';
+import BaseTable from './BaseTable.vue'
 defineOptions({
   name: 'HiTable'
 })

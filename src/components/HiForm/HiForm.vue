@@ -110,7 +110,6 @@ const emit = defineEmits(['update:formData', 'submit'])
 const haddleSubmit = () => {
   formRef.value?.validate((isValid: boolean) => {
     if (isValid) {
-      console.log(97, unref(props.formData))
       emit('submit', unref(props.formData))
     }
   })

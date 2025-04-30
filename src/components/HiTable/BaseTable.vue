@@ -2,6 +2,7 @@
 import BaseTableChart from './BaseTableChart.vue'
 import BaseActionItem from './BaseActionItem.vue'
 import BaseOverview from './BaseOverview.vue'
+import BaseTableColumns from './BaseTableColumns.vue'
 import {ElTable, ElTableColumn, ElRadio, ElPagination} from 'element-plus'
 import 'element-plus/theme-chalk/src/table.scss'
 import 'element-plus/theme-chalk/src/table-column.scss'
@@ -403,9 +404,6 @@ const handleSelectionChange = (row: any) => {
         label="序号"
         align="center"
       />
-      <!-- :columns="columns_config?.default" -->
-      <!-- v-bind="$attrs" -->
-       <!-- :state="state" -->
       <base-table-columns
         ref="$columns"
         :search-form-data="searchFormData"

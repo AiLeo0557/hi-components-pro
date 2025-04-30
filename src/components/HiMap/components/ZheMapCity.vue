@@ -19,11 +19,12 @@ const props = defineProps({
     type: Array,
     default: []
   },
-  use_click: Boolean
+  use_click: Boolean,
+  currentPriceType: String,
 })
 const fill = computed(() => {
   const data = props.price || props.value
-  const item = props.group.find((row: any) => {
+  const item: any = props.group.find((row: any) => {
     if (row.end) {
       return data >= row.start && data < row.end
     } else {
@@ -44,7 +45,7 @@ const format = (value: number) => getFormatNum(value, 2)
 </script>
 <template>
   <g>
-    <path :d="$attrs.path" :fill="fill" stroke="#87B8E5" stroke-miterlimit="10" />
+    <path :d="($attrs as any).path" :fill="fill" stroke="#87B8E5" stroke-miterlimit="10" />
     <text
       fill="white"
       fill-opacity="0.8"
@@ -54,20 +55,20 @@ const format = (value: number) => getFormatNum(value, 2)
       font-weight="600"
       letter-spacing="0px"
       text-anchor="middle"
-      v-if="state.currentPriceType !== '02'"
+      v-if="currentPriceType !== '02'"
     >
       <tspan
-        :x="$attrs.title_position.x"
-        :y="$attrs.title_position.y - 10"
+        :x="($attrs as any).title_position.x"
+        :y="($attrs as any).title_position.y - 10"
         :style="{
           fill:
-            value && value !== '-' && state.currentPriceType === '01' && fill !== '#FFAE4C'
+            value && value !== '-' && currentPriceType === '01' && fill !== '#FFAE4C'
               ? '#ffa04D!important'
               : '#fff!important',
           'white-space': 'pre'
         }"
       >
-        {{ $attrs.title }}
+        {{ ($attrs as any).title }}
       </tspan>
     </text>
     <text
@@ -79,17 +80,17 @@ const format = (value: number) => getFormatNum(value, 2)
       font-weight="600"
       letter-spacing="0px"
       text-anchor="middle"
-      v-if="state.currentPriceType === '02' && !value"
+      v-if="currentPriceType === '02' && !value"
     >
       <tspan
-        :x="$attrs.title_position.x"
-        :y="$attrs.title_position.y - 10"
+        :x="($attrs as any).title_position.x"
+        :y="($attrs as any).title_position.y - 10"
         :style="{
           fill: '#fff!important',
           'white-space': 'pre'
         }"
       >
-        {{ $attrs.title }}
+        {{ ($attrs as any).title }}
       </tspan>
     </text>
     <text
@@ -103,7 +104,7 @@ const format = (value: number) => getFormatNum(value, 2)
       text-anchor="middle"
     >
       <tspan
-        v-if="state.currentPriceType === '01'"
+        v-if="currentPriceType === '01'"
         @click="handdleClick($attrs)"
         class="dian_chang_gesu"
         :style="{
@@ -111,8 +112,8 @@ const format = (value: number) => getFormatNum(value, 2)
             value && value !== '-' && fill !== '#FFAE4C' ? '#ffa04D!important' : '#fff!important',
           'white-space': 'pre'
         }"
-        :x="$attrs.value_position.x"
-        :y="$attrs.value_position.y"
+        :x="($attrs as any).value_position.x"
+        :y="($attrs as any).value_position.y"
       >
         {{ value }}
       </tspan>

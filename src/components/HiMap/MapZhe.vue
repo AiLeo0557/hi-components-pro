@@ -137,9 +137,9 @@ const columns_config = computed(() => {
       v-bind="item"
       :data="data[index]"
       :group="group"
-      :price="data[index] ? data[index].price : '-'"
-      :value="data[index] ? data[index].value : '-'"
-      :ratioFormat="data[index] ? data[index].ratioFormat : '-'"
+      :price="data[index] ? (data[index] as any).price : '-'"
+      :value="data[index] ? (data[index] as any).value : '-'"
+      :ratioFormat="data[index] ? (data[index] as any).ratioFormat : '-'"
       :use_click="use_click"
       @loadData="haddleShow"
     />

@@ -5,6 +5,7 @@ import HiForm from '../HiForm/HiForm.vue'
 import HiTable from '../HiTable/HiTable.vue'
 import BaseTablePagination from './BaseTablePagination.vue'
 import { FormElementOption, HiFormConfig, HiFormItemOption, HiTableColElOptions } from 'hi-definitions'
+import { useBusPost, type HiResponseData } from 'hi-http'
 
 interface SearchFormData {
   groupCode: string[]
@@ -17,7 +18,26 @@ interface IGData {
   gengroupname_differ: string
   groupCode_differ: string
 }
-
+interface FSData {
+  differ: string
+  gengroupname: string
+  groupCode: string
+}
+interface ResultValue {
+  columns: HiTableColElOptions[]
+  fsData: FSData[]
+  igData: IGData[]
+  ig1201Data: IGData[]
+  keyPagerData: keyPagerData
+}
+interface keyPagerData {
+  current: number
+  pages: number
+  records: string[]
+  searchCount: number
+  size: number
+  total: number
+}
 export default defineComponent({
   name: 'table-data-access',
   components: {
@@ -91,7 +111,7 @@ export default defineComponent({
              * ig1201Data: 申报发布数据
              * fsData: 本地数据
              */
-            tableCols.value = data.resultValue!.columns.map((col) => {
+            tableCols.value = data.resultValue!.columns.map((col: any) => {
               if (col.columnName === 'differ') {
                 return {
                   prop: col.columnName,
@@ -123,7 +143,7 @@ export default defineComponent({
     const accessFormConfig: HiFormConfig<AccessFormData> = {
       inline: true,
       formData: reactive({
-        item: []
+        items: []
       }),
       showSearchBtn: true,
       searchBtnText: '接入',
@@ -157,24 +177,27 @@ export default defineComponent({
           span: 10,
           label: '接入字段',
           name: 'item',
-          multiple: true,
-          formrequired: true,
-          options: {
-            alias: ['text', 'value'],
-            args: [
-              'engine-bill/dropDown/queryTableFieldList',
-              { tableName },
-              {
-                params_type: 'formData',
-                onFormat(data: any) {
-                  return data
+          elConfig: {
+            multiple: true,
+            options_config: {
+              alias: ['text', 'value'],
+              args: [
+                'engine-bill/dropDown/queryTableFieldList',
+                { tableName },
+                {
+                  params_type: 'formData',
+                  onFormat(data: any) {
+                    return data
+                  }
                 }
-              }
-            ]
-          }
+              ]
+            }
+          },
+          formrequired: true
         }
       ],
-      labelWidth: 0
+      labelWidth: 0,
+      defaultSpan: 24
     }
     /**
      * table 滚动联动

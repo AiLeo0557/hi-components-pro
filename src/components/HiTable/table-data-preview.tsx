@@ -33,7 +33,7 @@ export default defineComponent({
           ...options,
           onFormat(res: any) {
             tableCols.value = res.resultValue.heads.map(
-              ({ width, ...item }: HiTableColElOptions): HiTableColElOptions => ({
+              ({ width, ...item }: any): HiTableColElOptions => ({
                 ...item,
                 minWidth: width,
                 align: 'center'

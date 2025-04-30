@@ -42,12 +42,15 @@ export default defineConfig({
         'dayjs',
         'sm-core',
         'vue-router',
-        '@hi-block/http',
-        '@hi-block/utils',
-        '@hi-block/definitions',
         'hi-datatype-operation',
+        'hi-definitions',
+        'hi-calc-pro',
+        'hi-hooks',
+        'hi-http',
+        'hi-utils-pro',
         /^element-plus/,
-        /^@vue\/.*/
+        /^@vue\/.*/,
+        /^@amcharts\/.*/
       ],
       output: {
         exports: 'named', // 关键！强制使用命名导出

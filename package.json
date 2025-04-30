@@ -1,6 +1,6 @@
 {
   "name": "hi-components-pro",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "dist/index.es.js",
   "module": "dist/index.es.js",
   "types": "dist/types/index.d.ts",

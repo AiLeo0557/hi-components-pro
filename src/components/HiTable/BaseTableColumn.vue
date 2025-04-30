@@ -3,8 +3,9 @@ import { ElIcon, ElTableColumn, ElTooltip } from 'element-plus';
 import 'element-plus/theme-chalk/src/table-column.scss';
 import 'element-plus/theme-chalk/src/icon.scss';
 import 'element-plus/theme-chalk/src/tooltip.scss';
-// import { InfoFilled } from '@element-plus/icons-vue';
-import BaseTableColumn from './BaseTableColumn.vue';
+defineOptions({
+  name: 'BaseTableColumn'
+})
 </script>
 <script lang="ts" setup>
 import { getFormatNum } from 'hi-utils-pro';

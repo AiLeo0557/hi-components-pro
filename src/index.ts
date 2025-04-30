@@ -6,9 +6,9 @@ import { default as HiForm } from './components/HiForm/HiForm.vue'
 import { default as HiTable } from './components/HiTable/HiTable.vue'
 import { default as HiTableItem } from './components/HiTable/HiTableItem'
 import { default as HiTableGroup } from './components/HiTable/HiTableGroup'
-import { default as MapZhe } from './components/HiMap/MapZhe.vue'
-import { default as MapZhong } from './components/HiMap/MapZhong.vue'
-import { default as SubMapZhe } from './components/HiMap/SubMapZhe.vue'
+// import { default as MapZhe } from './components/HiMap/MapZhe.vue'
+// import { default as MapZhong } from './components/HiMap/MapZhong.vue'
+// import { default as SubMapZhe } from './components/HiMap/SubMapZhe.vue'
 import { default as TableDataAccess } from './components/HiTable/table-data-access'
 import { default as TableDataPreview } from './components/HiTable/table-data-preview'
 import { default as DataChartFlow } from './components/HiChart/DataChartFlow.vue'
@@ -26,9 +26,9 @@ export default {
     app.component(HiTable.name, HiTable)
     app.component(HiTableItem.name, HiTableItem)
     app.component(HiTableGroup.name, HiTableGroup)
-    app.component(MapZhe.name, MapZhe)
-    app.component(MapZhong.name, MapZhong)
-    app.component(SubMapZhe.name, SubMapZhe)
+    // app.component(MapZhe.name, MapZhe)
+    // app.component(MapZhong.name, MapZhong)
+    // app.component(SubMapZhe.name, SubMapZhe)
     app.component(TableDataAccess.name, TableDataAccess)
     app.component(TableDataPreview.name, TableDataPreview)
     app.component(DataChartFlow.name, DataChartFlow)

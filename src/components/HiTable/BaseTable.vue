@@ -9,6 +9,7 @@ import 'element-plus/theme-chalk/src/table-column.scss'
 import 'element-plus/theme-chalk/src/pagination.scss'
 import 'element-plus/theme-chalk/src/scrollbar.scss'
 import 'element-plus/theme-chalk/src/radio.scss'
+import { HiRequestArgument } from 'hi-http'
 interface HiPaginationConfig {
   page_current: number
   page_size: number
@@ -39,7 +40,7 @@ import {
   useAttrs,
   watch,
 } from '@vue/runtime-core'
-import { HiTableActionConfig, type HiTableDataConfig } from 'hi-definitions'
+import { HiTableActionConfig, HiTableColElOptions, type HiTableDataConfig } from 'hi-definitions'
 import {useElementMounted, useState, useTableData} from 'hi-hooks'
 
 defineOptions({
@@ -102,7 +103,10 @@ const props = defineProps({
     type: Number,
     default: 0
   },
-  columns_config: Object,
+  columns_config: Object as PropType<{
+      default: HiTableColElOptions[] | null
+      args: HiRequestArgument<any> | null
+    }>,
   current_tab_name: String
 })
 const currentRow = ref<number>(-1)
@@ -408,7 +412,7 @@ const handleSelectionChange = (row: any) => {
         ref="$columns"
         :search-form-data="searchFormData"
         :columns_config="columns_config"
-        :moduleId="$attrs.moduleId"
+        :moduleId="($attrs as any).moduleId"
       />
     </el-table>
   </div>

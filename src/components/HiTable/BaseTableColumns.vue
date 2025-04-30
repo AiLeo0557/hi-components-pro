@@ -1,4 +1,5 @@
 <script lang="ts">
+import BaseTableColumn from './BaseTableColumn.vue'
 interface RemoteColumnOption {
   id: string
   columnCn: string
@@ -42,16 +43,12 @@ import 'element-plus/theme-chalk/src/icon.scss'
 // import type { HiPostArg, HiTableColumn, RemoteColumnOption } from 'types/global'
 // import { numFormat } from '@/utils/numFormat'
 const props = defineProps({
-  moduleId: {
-    type: String
-  },
+  moduleId: String,
   searchFormData: Object,
-  columns_config: {
-    type: Object as PropType<{
+  columns_config: Object as PropType<{
       default: HiTableColElOptions[] | null
       args: HiRequestArgument<any> | null
-    }>
-  },
+    }>,
   state: {
     type: Object,
     default: {}
@@ -158,10 +155,6 @@ const handleConfirm = () => {
     }
   )
 }
-</script>
-<!-- v-fix-width -->
-<script lang="ts">
-import BaseTableColumn from './BaseTableColumn.vue'
 </script>
 <template>
   <base-table-column :key="item.prop" v-bind="item" v-for="item in columns"></base-table-column>

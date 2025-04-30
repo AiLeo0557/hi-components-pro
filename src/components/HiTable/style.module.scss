@@ -1,0 +1,148 @@
+@use '~/styles/mixins' as *;
+@use 'element-plus/theme-chalk/src/dark/css-vars.scss' as *;
+.main_wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  .form_group {
+    display: flex;
+  }
+  .table_group {
+    display: flex;
+    gap: 10;
+    .table_group_item {
+      flex: 1;
+    }
+  }
+}
+
+.header {
+  width: 100vw;
+  padding: 0 20px;
+  @include use-flex-basis(64px, height);
+  @include use-flex-row(center, space-between);
+  background: url('./TopBG.png') no-repeat 0 0;
+  background-size: 100% 100%;
+  overflow: hidden;
+  .logo_wrapper {
+    @include use-flex-row(center, flex-start);
+    @include use-flex-basis(270px);
+    .system_title {
+      color: var(--hi-text-color-primary);
+      font-size: 23.5px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      font-family: 'PingFang SC', 'Microsoft YaHei', '微软雅黑';
+      text-wrap: nowrap;
+    }
+    .system_logo {
+      height: 32px;
+      margin-right: 5px;
+      margin-bottom: -2px;
+    }
+  }
+  .usercenter_wrapper {
+    @include use-flex-row(center, flex-end);
+    @include use-flex-basis(180px);
+    gap: 10px;
+    height: 30px;
+    .user_icon_wrapper {
+      position: relative;
+      cursor: pointer;
+      .user_icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        background-color: #ff6875;
+        border: 2px solid #fff;
+        position: absolute;
+        z-index: 1;
+        top: -3px;
+        right: -5px;
+        border-radius: 50%;
+      }
+    }
+    .user_name {
+      font-size: 14px;
+      @include use-flex-row();
+      gap: 5px;
+      cursor: pointer;
+      color: #fff !important;
+    }
+    .user_setting {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+  }
+  .menu_wrapper {
+    padding: 0 32px;
+    height: 100%;
+    position: relative;
+    @include use-flex-basis(calc(100vw - 645px));
+    .btn_left,
+    .btn_right {
+      top: 24px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      position: absolute;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.6);
+      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .arrow {
+        height: 10px;
+        color: #033971;
+      }
+    }
+    .btn_left:hover,
+    .btn_right:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+    .btn_left {
+      left: 5px;
+    }
+    .btn_right {
+      right: 5px;
+    }
+    .menu_list {
+      height: 64px;
+      @include use-flex-row(center, flex-start);
+      .menu_item {
+        height: 36px;
+        flex-shrink: 0;
+        cursor: pointer;
+        padding: 0 16px;
+        line-height: 36px;
+        .menu_item_title {
+          font-size: 15px;
+          font-weight: 400;
+          font-family:
+            PingFang SC,
+            Hiragino Sans GB,
+            Microsoft YaHei,
+            微软雅黑;
+          color: rgba(255, 255, 255, 0.6);
+          transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+      .menu_item.selected {
+        background-color: #ffffff1a;
+        border-radius: 4px;
+        .menu_item_title {
+          color: #fff;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+// --hi-bg-color-overlay

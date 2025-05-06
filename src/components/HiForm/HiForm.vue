@@ -7,7 +7,14 @@ import 'element-plus/theme-chalk/src/col.scss';
 import {
   ref, 
   defineExpose,
-  defineProps, PropType, inject, reactive, useAttrs, computed, 
+  defineProps,
+  defineOptions,
+  defineEmits,
+  PropType,
+  inject,
+  reactive,
+  useAttrs,
+  computed, 
   unref,
   toRaw
 } from '@vue/runtime-core';

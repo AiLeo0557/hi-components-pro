@@ -28,7 +28,20 @@ import { PieChart, PieSeries } from '@amcharts/amcharts5/percent'
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated'
 import am5themes_Dark from '@amcharts/amcharts5/themes/Dark'
 import {getDeepCopy, getFieldValueByPath, getStringBetween, isDeepEqual} from 'hi-utils-pro'
-import { computed, nextTick, onMounted, reactive, ref, toRaw, useAttrs, watch } from '@vue/runtime-core'
+import {
+  computed,
+  nextTick,
+  onMounted,
+  reactive,
+  ref,
+  toRaw,
+  useAttrs,
+  watch,
+  defineProps,
+  defineEmits,
+  defineExpose,
+  defineOptions,
+} from '@vue/runtime-core'
 // import { useCssVars } from '@vueuse/core'
 import { useBusPost, getRequestParams } from 'hi-http'
 import DataChartTop from '../HiChart/DataChartTop.vue'
@@ -36,6 +49,9 @@ import DataChartFlow from '../HiChart/DataChartFlow.vue'
 import { ElTable, ElTableColumn } from 'element-plus'
 import 'element-plus/theme-chalk/src/table.scss'
 import 'element-plus/theme-chalk/src/table-column.scss'
+defineOptions({
+  name: 'BaseTableChart'
+})
 </script>
 <script lang="ts" setup>
 const props = defineProps({

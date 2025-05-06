@@ -1,7 +1,7 @@
 <script lang="ts">
 import { useAttrs, defineExpose, defineOptions } from '@vue/runtime-core';
 import { defineHiFormItems } from 'hi-definitions';
-import HiFrom from '../HiForm/HiForm.vue'
+import HiForm from '../HiForm/HiForm.vue'
 defineOptions({
   name: 'BaseUploadForm',
 })

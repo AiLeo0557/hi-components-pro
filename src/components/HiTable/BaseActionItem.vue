@@ -15,6 +15,7 @@ import {
   ref,
   defineProps,
   defineEmits,
+  defineOptions,
   computed,
   useAttrs,
   reactive,
@@ -30,6 +31,9 @@ import {
 } from 'element-plus'
 import 'element-plus/theme-chalk/src/button.scss'
 import BaseActionItemImport from './BaseActionItemImport.vue'
+defineOptions({
+  name: 'BaseActionItem',
+})
 </script>
 <script lang="ts" setup>
 /**

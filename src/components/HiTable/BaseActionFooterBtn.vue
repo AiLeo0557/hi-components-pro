@@ -3,9 +3,12 @@ import { ElButton } from 'element-plus'
 import 'element-plus/theme-chalk/src/button.scss'
 import { useBusPost } from 'hi-http'
 import { getFieldValueByPath } from 'hi-utils-pro'
-import { useAttrs, defineProps, defineEmits } from '@vue/runtime-core'
+import { useAttrs, defineOptions, defineProps, defineEmits } from '@vue/runtime-core'
 </script>
 <script lang="ts" setup>
+defineOptions({
+  name: 'BaseActionFooterBtn'
+})
 const props = defineProps({
   formData: Object
 })

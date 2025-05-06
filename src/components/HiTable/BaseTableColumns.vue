@@ -1,5 +1,18 @@
 <script lang="ts">
-import {defineOptions} from '@vue/runtime-core';
+import {
+  computed,
+  onMounted,
+  PropType,
+  reactive,
+  ref,
+  toRaw,
+  unref,
+  watch,
+  defineProps,
+  defineExpose,
+  Teleport,
+  defineOptions,
+} from '@vue/runtime-core'
 defineOptions({
   name: 'BaseTableColumns'
 })
@@ -21,21 +34,6 @@ interface RemoteColumnOption {
   moduleName: string
   sortNum: string
 }
-</script>
-<script lang="ts" setup>
-import {
-  computed,
-  onMounted,
-  PropType,
-  reactive,
-  ref,
-  toRaw,
-  unref,
-  watch,
-  defineProps,
-  defineExpose,
-  Teleport,
-} from '@vue/runtime-core'
 import { type HiTableColElOptions } from 'hi-definitions'
 import { useElementMounted } from 'hi-hooks'
 import { type HiRequestArgument, useBusPost } from 'hi-http'
@@ -43,9 +41,8 @@ import { getFieldValueByPath } from 'hi-utils-pro'
 import { ElButton, ElIcon} from 'element-plus'
 import 'element-plus/theme-chalk/src/button.scss'
 import 'element-plus/theme-chalk/src/icon.scss'
-
-// import type { HiPostArg, HiTableColumn, RemoteColumnOption } from 'types/global'
-// import { numFormat } from '@/utils/numFormat'
+</script>
+<script lang="ts" setup>
 const props = defineProps({
   moduleId: String,
   searchFormData: Object,

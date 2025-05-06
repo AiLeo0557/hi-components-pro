@@ -1,5 +1,5 @@
 <script lang="ts">
-import { type PropType, useAttrs, defineProps } from "@vue/runtime-core";
+import { type PropType, useAttrs, defineOptions, defineProps } from "@vue/runtime-core";
 import { ElDatePicker } from "element-plus";
 import 'element-plus/theme-chalk/src/date-picker.scss';
 import Season from "./Season.vue";

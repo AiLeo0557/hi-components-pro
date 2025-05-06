@@ -3,7 +3,19 @@ import { ElTooltip } from 'element-plus'
 import 'element-plus/theme-chalk/src/tooltip.scss'
 import { useBusPost, getRequestParams } from 'hi-http'
 import { getFieldValueByPath, getFormatNum, getStringBetween } from 'hi-utils-pro'
-import { computed, defineOptions, inject, onMounted, reactive, ref, useAttrs, watch } from '@vue/runtime-core'
+import {
+  computed,
+  defineProps,
+  defineOptions,
+  defineEmits,
+  inject,
+  onMounted,
+  reactive,
+  ref,
+  useAttrs,
+  watch,
+  watchEffect
+} from '@vue/runtime-core'
 defineOptions({
   name: 'BaseOverview'
 })

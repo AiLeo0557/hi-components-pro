@@ -5,6 +5,24 @@ type HiPaginationParam = [
   pageName: string,
   sizeName: string,
 ]
+import {
+  computed,
+  defineProps,
+  defineOptions,
+  defineEmits,
+  defineExpose,
+  inject,
+  nextTick,
+  onMounted,
+  PropType,
+  reactive,
+  ref,
+  toRef,
+  useAttrs,
+  watch,
+} from '@vue/runtime-core'
+import { HiTableActionConfig, HiTableColElOptions, type HiTableDataConfig } from 'hi-definitions'
+import {useElementMounted, useState, useTableData} from 'hi-hooks'
 import BaseTableChart from './BaseTableChart.vue'
 import BaseActionItem from './BaseActionItem.vue'
 import BaseOverview from './BaseOverview.vue'
@@ -27,22 +45,6 @@ interface HiPaginationConfig {
 }
 </script>
 <script lang="ts" setup>
-import {
-  computed,
-  defineOptions,
-  inject,
-  nextTick,
-  onMounted,
-  PropType,
-  reactive,
-  ref,
-  toRef,
-  useAttrs,
-  watch,
-} from '@vue/runtime-core'
-import { HiTableActionConfig, HiTableColElOptions, type HiTableDataConfig } from 'hi-definitions'
-import {useElementMounted, useState, useTableData} from 'hi-hooks'
-
 defineOptions({
   inheritAttrs: false
 })

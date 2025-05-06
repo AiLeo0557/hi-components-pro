@@ -11,7 +11,17 @@ import 'element-plus/theme-chalk/src/message.scss'
 import { defineHiFormItems, type HiTableColOptions } from 'hi-definitions'
 import { useBusPost } from 'hi-http'
 import { getFieldValueByPath, getFormData } from 'hi-utils-pro'
-import { inject, reactive, ref, useAttrs, watch, defineOptions } from '@vue/runtime-core'
+import {
+  inject,
+  reactive,
+  ref,
+  useAttrs,
+  watch,
+  defineOptions,
+  defineProps,
+  defineEmits,
+  defineExpose
+} from '@vue/runtime-core'
 defineOptions({
   name: 'BaseActionItemImport'
 })

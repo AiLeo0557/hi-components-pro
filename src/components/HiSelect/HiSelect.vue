@@ -12,6 +12,8 @@ import {
   useAttrs,
   type PropType,
   defineOptions,
+  defineProps,
+  defineEmits,
 } from "@vue/runtime-core";
 import { type HiSelectOptionsConfig } from "hi-definitions";
 import { getFieldValueByPath } from "hi-utils-pro";

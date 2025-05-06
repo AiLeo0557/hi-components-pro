@@ -1,7 +1,7 @@
 <script lang="ts">
 import DataChartPie from './DataChartPie.vue';
 import IconPointer from '../HiIcon/IconPointer.vue';
-import {defineOptions, PropType} from '@vue/runtime-core'
+import {defineOptions, defineProps, PropType} from '@vue/runtime-core'
 defineOptions({
   name: 'DataChartPieBox'
 })

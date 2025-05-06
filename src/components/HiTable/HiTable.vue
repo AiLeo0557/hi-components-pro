@@ -1,5 +1,9 @@
 <script lang="ts">
-import { ref, defineExpose, defineOptions } from '@vue/runtime-core';
+import {
+  ref,
+  defineExpose,
+  defineOptions,
+} from '@vue/runtime-core';
 import BaseTable from './BaseTable.vue';
 import BaseTablePagination from './BaseTablePagination.vue';
 defineOptions({

@@ -1,5 +1,5 @@
 <script lang="ts">
-import { computed } from "@vue/runtime-core";
+import { computed, defineProps, defineEmits} from "@vue/runtime-core";
 import { ElDatePicker} from "element-plus"
 const props = defineProps({
   modelValue: {
@@ -7,10 +7,9 @@ const props = defineProps({
     default: "",
   },
 });
+const emit = defineEmits(["update:modelValue"]);
 </script>
 <script setup lang="ts">
-const emit = defineEmits(["update:modelValue"]);
-
 // 转换绑定值为日期对象
 const selectedDate = computed({
   get: () => {
@@ -29,7 +28,6 @@ const selectedDate = computed({
     emit("update:modelValue", `${year}-Q${quarter}`);
   },
 });
-
 // 格式化显示内容
 // const format = {
 //   stringify: (date: Date | null) => {

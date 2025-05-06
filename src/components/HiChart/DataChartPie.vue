@@ -4,12 +4,11 @@ import { PieChart, PieSeries } from '@amcharts/amcharts5/percent'
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated'
 import am5themes_Dark from '@amcharts/amcharts5/themes/Dark'
 import { onMounted, useAttrs, watch, defineOptions, defineProps } from '@vue/runtime-core'
-
+</script>
+<script lang="ts" setup>
 defineOptions({
   name: 'DataChartPie'
 })
-</script>
-<script lang="ts" setup>
 const props = defineProps({
   data: Array
 })

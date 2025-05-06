@@ -49,11 +49,11 @@ import DataChartFlow from '../HiChart/DataChartFlow.vue'
 import { ElTable, ElTableColumn } from 'element-plus'
 import 'element-plus/theme-chalk/src/table.scss'
 import 'element-plus/theme-chalk/src/table-column.scss'
+</script>
+<script lang="ts" setup>
 defineOptions({
   name: 'BaseTableChart'
 })
-</script>
-<script lang="ts" setup>
 const props = defineProps({
   searchResult: Array,
   tableData: {

@@ -4,11 +4,11 @@ import 'element-plus/theme-chalk/src/switch.scss'
 import 'element-plus/theme-chalk/src/scrollbar.scss'
 import { getFormatNum } from 'hi-utils-pro';
 import { defineProps, type PropType, defineOptions } from '@vue/runtime-core'
+</script>
+<script lang="ts" setup>
 defineOptions({
   name: 'DataChartTop'
 })
-</script>
-<script lang="ts" setup>
 const num_format = (num: number) => getFormatNum(num, 5)
 defineProps({
   dataChartTopList: {

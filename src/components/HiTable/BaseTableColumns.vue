@@ -13,9 +13,6 @@ import {
   Teleport,
   defineOptions,
 } from '@vue/runtime-core'
-defineOptions({
-  name: 'BaseTableColumns'
-})
 import BaseTableColumn from './BaseTableColumn.vue'
 interface RemoteColumnOption {
   id: string
@@ -43,6 +40,9 @@ import 'element-plus/theme-chalk/src/button.scss'
 import 'element-plus/theme-chalk/src/icon.scss'
 </script>
 <script lang="ts" setup>
+defineOptions({
+  name: 'BaseTableColumns'
+})
 const props = defineProps({
   moduleId: String,
   searchFormData: Object,

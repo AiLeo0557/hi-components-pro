@@ -14,12 +14,11 @@ import duration from 'dayjs/plugin/duration'
 import {calc} from 'hi-calc-pro';
 import { getFieldValueByPath } from "hi-utils-pro";
 import { useBusPost, getRequestParams } from "hi-http";
-
+</script>
+<script lang="ts" setup>
 defineOptions({
   name: "HiFormItem"
 })
-</script>
-<script lang="ts" setup>
 dayjs.extend(duration)
 
 const props = defineProps({

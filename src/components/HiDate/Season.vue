@@ -1,6 +1,8 @@
 <script lang="ts">
 import { computed, defineProps, defineEmits} from "@vue/runtime-core";
 import { ElDatePicker} from "element-plus"
+</script>
+<script setup lang="ts">
 const props = defineProps({
   modelValue: {
     type: String,
@@ -8,8 +10,6 @@ const props = defineProps({
   },
 });
 const emit = defineEmits(["update:modelValue"]);
-</script>
-<script setup lang="ts">
 // 转换绑定值为日期对象
 const selectedDate = computed({
   get: () => {

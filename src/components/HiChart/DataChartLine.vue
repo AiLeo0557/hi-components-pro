@@ -12,11 +12,11 @@ import {
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated'
 import am5themes_Dark from '@amcharts/amcharts5/themes/Dark'
 import { onMounted, defineOptions } from '@vue/runtime-core'
+</script>
+<script lang="ts" setup>
 defineOptions({
   name: 'DataChartLine'
 })
-</script>
-<script lang="ts" setup>
 onMounted(() => {
   let root = Root.new('line-chart-wrap')
   root.setThemes([am5themes_Animated.new(root), am5themes_Dark.new(root)])

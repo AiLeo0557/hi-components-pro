@@ -22,11 +22,11 @@ import {
   defineEmits,
   defineExpose
 } from '@vue/runtime-core'
+</script>
+<script lang="ts" setup>
 defineOptions({
   name: 'BaseActionItemImport'
 })
-</script>
-<script lang="ts" setup>
 const page_state: any = inject('page_state', reactive({}))
 const $upload_form = ref<any>(null)
 const {

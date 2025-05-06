@@ -21,11 +21,11 @@ import {
 
 import { type HiFormItemOption, type FormElementOption } from 'hi-definitions';
 import HiFormItem from '../HiFormItem/HiFormItem.vue';
+</script>
+<script lang="ts" setup>
 defineOptions({
   name: 'HiForm'
 })
-</script>
-<script lang="ts" setup>
 const formRef = ref<FormInstance>()
 const props = defineProps({
   showSearchBtn: {

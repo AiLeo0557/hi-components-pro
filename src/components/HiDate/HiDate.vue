@@ -3,15 +3,15 @@ import { type PropType, useAttrs, defineOptions, defineProps } from "@vue/runtim
 import { ElDatePicker } from "element-plus";
 import 'element-plus/theme-chalk/src/date-picker.scss';
 import Season from "./Season.vue";
-defineOptions({
-  name: "HiDate",
-});
 interface DateFormConfig {
   disabledDateStartKey?: string;
   disabledDateEndKey?: string;
 }
 </script>
 <script lang="ts" setup>
+defineOptions({
+  name: "HiDate",
+});
 const props = defineProps({
   formData: Object as PropType<any>,
   disabledDate: Function,

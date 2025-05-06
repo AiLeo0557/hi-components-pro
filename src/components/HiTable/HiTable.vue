@@ -6,11 +6,11 @@ import {
 } from '@vue/runtime-core';
 import BaseTable from './BaseTable.vue';
 import BaseTablePagination from './BaseTablePagination.vue';
+</script>
+<script setup lang="ts">
 defineOptions({
   name: 'HiTable'
 })
-</script>
-<script setup lang="ts">
 const baseTableRef = ref<any>(null)
 defineExpose({
   baseTableRef

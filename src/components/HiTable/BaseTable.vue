@@ -46,7 +46,7 @@ interface HiPaginationConfig {
 </script>
 <script lang="ts" setup>
 defineOptions({
-  inheritAttrs: false
+  name: 'BaseTable'
 })
 const props = defineProps({
   tableHeight: {

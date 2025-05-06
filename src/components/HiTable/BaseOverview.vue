@@ -16,11 +16,11 @@ import {
   watch,
   watchEffect
 } from '@vue/runtime-core'
+</script>
+<script lang="ts" setup>
 defineOptions({
   name: 'BaseOverview'
 })
-</script>
-<script lang="ts" setup>
 const props = defineProps({
   tableDataParam: Object,
   overviewData: {

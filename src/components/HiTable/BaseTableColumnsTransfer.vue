@@ -1,4 +1,8 @@
 <script lang="ts">
+import {defineOptions, PropType, defineProps} from '@vue/runtime-core';
+defineOptions({
+  name: 'BaseTableColumnsTransfer'
+})
 interface RemoteColumnOption {
   id: string
   columnCn: string
@@ -18,8 +22,6 @@ interface RemoteColumnOption {
 }
 </script>
 <script lang="ts" setup>
-import { PropType, defineProps } from '@vue/runtime-core'
-
 defineProps({
   targetdata: {
     type: Array as PropType<RemoteColumnOption[]>,

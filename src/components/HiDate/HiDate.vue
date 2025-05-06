@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script lang="ts">
 import { type PropType, useAttrs, defineProps } from "@vue/runtime-core";
 import { ElDatePicker } from "element-plus";
 import 'element-plus/theme-chalk/src/date-picker.scss';
@@ -10,6 +10,8 @@ interface DateFormConfig {
   disabledDateStartKey?: string;
   disabledDateEndKey?: string;
 }
+</script>
+<script lang="ts" setup>
 const props = defineProps({
   formData: Object as PropType<any>,
   disabledDate: Function,

@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script lang="ts">
 import {
   Root,
   Legend,
@@ -31,7 +31,13 @@ import {getDeepCopy, getFieldValueByPath, getStringBetween, isDeepEqual} from 'h
 import { computed, nextTick, onMounted, reactive, ref, toRaw, useAttrs, watch } from '@vue/runtime-core'
 // import { useCssVars } from '@vueuse/core'
 import { useBusPost, getRequestParams } from 'hi-http'
-
+import DataChartTop from '../HiChart/DataChartTop.vue'
+import DataChartFlow from '../HiChart/DataChartFlow.vue'
+import { ElTable, ElTableColumn } from 'element-plus'
+import 'element-plus/theme-chalk/src/table.scss'
+import 'element-plus/theme-chalk/src/table-column.scss'
+</script>
+<script lang="ts" setup>
 const props = defineProps({
   searchResult: Array,
   tableData: {
@@ -652,13 +658,6 @@ const table_columns_config = computed(() => {
     align
   }))
 })
-</script>
-<script lang="ts">
-import DataChartTop from '../HiChart/DataChartTop.vue'
-import DataChartFlow from '../HiChart/DataChartFlow.vue'
-import { ElTable, ElTableColumn } from 'element-plus'
-import 'element-plus/theme-chalk/src/table.scss'
-import 'element-plus/theme-chalk/src/table-column.scss'
 </script>
 <template>
   <div

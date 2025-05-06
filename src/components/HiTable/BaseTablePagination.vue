@@ -1,5 +1,10 @@
+<script lang="ts">
+import { defineProps, defineOptions } from '@vue/runtime-core'
+defineOptions({
+  name: 'BaseTablePagination'
+})
+</script>
 <script lang="ts" setup>
-import { defineProps } from '@vue/runtime-core'
 defineProps({
   index: {
     type: Number,

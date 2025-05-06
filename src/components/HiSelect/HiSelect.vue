@@ -4,8 +4,6 @@ import "element-plus/theme-chalk/src/select.scss";
 import "element-plus/theme-chalk/src/option.scss";
 import "element-plus/theme-chalk/src/checkbox.scss";
 import "element-plus/theme-chalk/src/checkbox-group.scss";
-</script>
-<script lang="ts" setup>
 import {
   computed,
   ref,
@@ -22,6 +20,8 @@ import { isUndefined, isStrictObject } from "hi-datatype-operation";
 defineOptions({
   name: "HiSelect",
 });
+</script>
+<script lang="ts" setup>
 const props = defineProps({
   ...SelectProps,
   modelValue: {

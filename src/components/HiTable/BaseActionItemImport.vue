@@ -1,21 +1,22 @@
 <script lang="ts">
-import { ElButton, ElMessage, type UploadUserFile } from 'element-plus'
-import 'element-plus/theme-chalk/src/button.scss'
-import 'element-plus/theme-chalk/src/upload.scss'
-import 'element-plus/theme-chalk/src/message.scss'
-</script>
-<script lang="ts" setup>
-import { defineHiFormItems, type HiTableColOptions } from 'hi-definitions'
-import { useBusPost } from 'hi-http'
-import { getFieldValueByPath, getFormData } from 'hi-utils-pro'
-import { inject, reactive, ref, useAttrs, watch } from '@vue/runtime-core'
-
 interface ResData {
   name: string[]
   namecn: string[]
   datelist: any
 }
-// const { flowRight, findIndex, uniqBy } = fp
+import { ElButton, ElMessage, type UploadUserFile } from 'element-plus'
+import 'element-plus/theme-chalk/src/button.scss'
+import 'element-plus/theme-chalk/src/upload.scss'
+import 'element-plus/theme-chalk/src/message.scss'
+import { defineHiFormItems, type HiTableColOptions } from 'hi-definitions'
+import { useBusPost } from 'hi-http'
+import { getFieldValueByPath, getFormData } from 'hi-utils-pro'
+import { inject, reactive, ref, useAttrs, watch, defineOptions } from '@vue/runtime-core'
+defineOptions({
+  name: 'BaseActionItemImport'
+})
+</script>
+<script lang="ts" setup>
 const page_state: any = inject('page_state', reactive({}))
 const $upload_form = ref<any>(null)
 const {

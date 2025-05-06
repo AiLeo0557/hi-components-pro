@@ -1,10 +1,13 @@
 <script lang="ts">
+import { ref,defineEmits,defineProps, PropType, defineOptions } from '@vue/runtime-core'
 import { ElTable, ElTableColumn} from 'element-plus'
 import 'element-plus/theme-chalk/src/table.scss'
 import 'element-plus/theme-chalk/src/table-column.scss'
+defineOptions({
+  name: 'HiDragSortableTable'
+})
 </script>
 <script lang="ts" setup>
-import { ref,defineEmits,defineProps, PropType } from '@vue/runtime-core'
 const props = defineProps({
   tableData: {
     type: Array as PropType<any>,

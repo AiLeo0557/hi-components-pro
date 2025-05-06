@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script lang="ts">
 import { Root, Tooltip } from '@amcharts/amcharts5'
 import {
   XYChart,
@@ -15,6 +15,8 @@ import { onMounted, defineOptions } from '@vue/runtime-core'
 defineOptions({
   name: 'DataChartLine'
 })
+</script>
+<script lang="ts" setup>
 onMounted(() => {
   let root = Root.new('line-chart-wrap')
   root.setThemes([am5themes_Animated.new(root), am5themes_Dark.new(root)])

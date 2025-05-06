@@ -4,8 +4,6 @@ import 'element-plus/theme-chalk/src/form.scss';
 import 'element-plus/theme-chalk/src/row.scss';
 import 'element-plus/theme-chalk/src/button.scss';
 import 'element-plus/theme-chalk/src/col.scss';
-</script>
-<script lang="ts" setup>
 import {
   ref, 
   defineExpose,
@@ -19,6 +17,8 @@ import HiFormItem from '../HiFormItem/HiFormItem.vue';
 defineOptions({
   name: 'HiForm'
 })
+</script>
+<script lang="ts" setup>
 const formRef = ref<FormInstance>()
 const props = defineProps({
   showSearchBtn: {

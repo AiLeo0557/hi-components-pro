@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script lang="ts">
 import { Root, Tooltip, percent, color } from '@amcharts/amcharts5'
 import { PieChart, PieSeries } from '@amcharts/amcharts5/percent'
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated'
@@ -8,6 +8,8 @@ import { onMounted, useAttrs, watch, defineOptions, defineProps } from '@vue/run
 defineOptions({
   name: 'DataChartPie'
 })
+</script>
+<script lang="ts" setup>
 const props = defineProps({
   data: Array
 })

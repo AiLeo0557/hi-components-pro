@@ -1,9 +1,4 @@
 <script lang="ts">
-import { ElButton } from 'element-plus'
-import 'element-plus/theme-chalk/src/button.scss'
-import BaseActionItemImport from './BaseActionItemImport.vue'
-</script>
-<script lang="ts" setup>
 import {
   defineHiFormItems,
   defineHiTableConfig,
@@ -31,8 +26,12 @@ import {
   dayjs,
   ElMessage,
   ElMessageBox,
+  ElButton,
 } from 'element-plus'
-
+import 'element-plus/theme-chalk/src/button.scss'
+import BaseActionItemImport from './BaseActionItemImport.vue'
+</script>
+<script lang="ts" setup>
 /**
  * 行内新增、编辑状态
  */

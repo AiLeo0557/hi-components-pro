@@ -2,8 +2,6 @@
 import {dayjs, ElCol, ElFormItem} from "element-plus";
 import 'element-plus/theme-chalk/src/form-item.scss';
 import 'element-plus/theme-chalk/src/col.scss';
-</script>
-<script lang="ts" setup>
 import { computed, defineEmits, onMounted, watch } from "@vue/runtime-core";
 import duration from 'dayjs/plugin/duration'
 import {calc} from 'hi-calc-pro';
@@ -13,6 +11,8 @@ import { useBusPost, getRequestParams } from "hi-http";
 defineOptions({
   name: "HiFormItem"
 })
+</script>
+<script lang="ts" setup>
 dayjs.extend(duration)
 
 const props = defineProps({

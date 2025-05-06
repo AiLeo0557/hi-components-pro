@@ -1,4 +1,10 @@
 <script lang="ts">
+type HiPaginationParam = [
+  page: number,
+  pageSize: number,
+  pageName: string,
+  sizeName: string,
+]
 import BaseTableChart from './BaseTableChart.vue'
 import BaseActionItem from './BaseActionItem.vue'
 import BaseOverview from './BaseOverview.vue'
@@ -19,12 +25,6 @@ interface HiPaginationConfig {
   pagination_hidden: boolean
   hidden: boolean
 }
-type HiPaginationParam = [
-  number,
-  number,
-  string,
-  string
-]
 </script>
 <script lang="ts" setup>
 import {

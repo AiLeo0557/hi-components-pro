@@ -5,10 +5,9 @@ import {defineOptions, PropType} from '@vue/runtime-core'
 defineOptions({
   name: 'DataChartPieBox'
 })
+import { getFormatNum } from 'hi-utils-pro';
 </script>
 <script lang="ts" setup>
-import { getFormatNum } from 'hi-utils-pro';
-
 const colors = ['#397DD3', '#5FBA99', '#8C8DD1', '#5BBDCB', '#379689', '#87D5E0']
 defineProps({
   items: Array as PropType<{label: string, value: number, format?: number}[]>,

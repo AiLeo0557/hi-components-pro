@@ -1,4 +1,8 @@
 <script lang="ts">
+import {defineOptions} from '@vue/runtime-core';
+defineOptions({
+  name: 'BaseTableColumns'
+})
 import BaseTableColumn from './BaseTableColumn.vue'
 interface RemoteColumnOption {
   id: string

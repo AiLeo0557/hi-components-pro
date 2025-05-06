@@ -1,14 +1,17 @@
-<script lang="ts" setup>
-import { useAttrs, defineExpose } from '@vue/runtime-core';
+<script lang="ts">
+import { useAttrs, defineExpose, defineOptions } from '@vue/runtime-core';
 import { defineHiFormItems } from 'hi-definitions';
-
+import HiFrom from '../HiForm/HiForm.vue'
+defineOptions({
+  name: 'BaseUploadForm',
+})
+</script>
+<script lang="ts" setup>
 const { configs }: any = useAttrs()
 const [formData, formItems] = defineHiFormItems(configs.items)
 defineExpose({ formData })
 </script>
-<script lang="ts">
-import HiFrom from '../HiForm/HiForm.vue'
-</script>
+
 <template>
   <hi-form
     :inline="false"

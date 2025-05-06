@@ -3,14 +3,14 @@ import { ElIcon, ElTableColumn, ElTooltip } from 'element-plus';
 import 'element-plus/theme-chalk/src/table-column.scss';
 import 'element-plus/theme-chalk/src/icon.scss';
 import 'element-plus/theme-chalk/src/tooltip.scss';
-</script>
-<script lang="ts" setup>
 import { getFormatNum } from 'hi-utils-pro';
 import {isString} from 'hi-datatype-operation';
 import {useAttrs, defineOptions} from '@vue/runtime-core';
 defineOptions({
   name: 'BaseTableColumn'
 })
+</script>
+<script lang="ts" setup>
 const attrs = useAttrs()
 const { label, subColumns, numFormat: num }: any = attrs
 </script>

@@ -11,6 +11,7 @@ import {
   watchEffect,
   useAttrs,
   type PropType,
+  defineOptions,
 } from "@vue/runtime-core";
 import { type HiSelectOptionsConfig } from "hi-definitions";
 import { getFieldValueByPath } from "hi-utils-pro";

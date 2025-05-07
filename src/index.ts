@@ -16,6 +16,7 @@ import { default as DataChartLine } from './components/HiChart/DataChartLine.vue
 import { default as DataChartPie } from './components/HiChart/DataChartPie.vue'
 import { default as DataChartPieBox } from './components/HiChart/DataChartPieBox.vue'
 import { default as DataChartTop } from './components/HiChart/DataChartTop.vue'
+import { default as HiDialog } from './components/HiDialog/HiDialog.vue'
 export default {
   install(app: any) {
     app.component(HiInput.name, HiInput)
@@ -36,5 +37,6 @@ export default {
     app.component(DataChartPie.name, DataChartPie)
     app.component(DataChartPieBox.name, DataChartPieBox)
     app.component(DataChartTop.name, DataChartTop)
+    app.component(HiDialog.name, HiDialog)
   }
 }

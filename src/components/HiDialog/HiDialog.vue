@@ -1,6 +1,11 @@
 <script lang="ts">
 import {ElButton, ElDialog, ElScrollbar} from 'element-plus'
-import { computed } from '@vue/runtime-core';
+import {
+  computed,
+  defineOptions,
+  defineProps,
+  defineEmits,
+ } from '@vue/runtime-core';
 import 'element-plus/theme-chalk/src/dialog.scss'
 import 'element-plus/theme-chalk/src/button.scss'
 import 'element-plus/theme-chalk/src/scrollbar.scss'
@@ -9,6 +14,9 @@ import 'element-plus/theme-chalk/src/scrollbar.scss'
 /**
  * 弹窗组件
  */
+defineOptions({
+  name: 'HiDialog'
+})
 const props = defineProps({
   visible: {
     type: Boolean,

@@ -30,6 +30,8 @@ defineExpose({
   flex: 1;
   /** 2024-11-29 md-multi-dimension-presentation 煤电联动 */
   height: 100%;
+  /* 2025-05-06 stable-suply-guaranteed-price 保供稳价大屏内页 */
+  width: 100%;
   display: flex;
 }
 .table-with-map-wrapper:deep(.map-wrapper) {

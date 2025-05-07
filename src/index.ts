@@ -17,6 +17,7 @@ import { default as DataChartPie } from './components/HiChart/DataChartPie.vue'
 import { default as DataChartPieBox } from './components/HiChart/DataChartPieBox.vue'
 import { default as DataChartTop } from './components/HiChart/DataChartTop.vue'
 import { default as HiDialog } from './components/HiDialog/HiDialog.vue'
+export { HiDialog, HiTable }
 export default {
   install(app: any) {
     app.component(HiInput.name, HiInput)

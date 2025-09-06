@@ -1,5 +1,10 @@
 <script lang="ts">
-import { ElSelect, ElOption, ElCheckbox, type CheckboxValueType } from "element-plus";
+import {
+  ElSelect,
+  ElOption,
+  ElCheckbox,
+  type CheckboxValueType
+} from "element-plus";
 import "element-plus/theme-chalk/src/select.scss";
 import "element-plus/theme-chalk/src/option.scss";
 import "element-plus/theme-chalk/src/checkbox.scss";
@@ -14,24 +19,31 @@ import {
   defineOptions,
   defineProps,
   defineEmits,
+  toRefs,
 } from "@vue/runtime-core";
 import { type HiSelectOptionsConfig } from "hi-definitions";
 import { getFieldValueByPath } from "hi-utils-pro";
 import { useBusPost, useBusGet, getRequestParams } from "hi-http"; //
-import { SelectProps } from "element-plus/es/components/select/src/select";
+import { selectProps } from "element-plus/es/components/select/src/select";
 import { isUndefined, isStrictObject } from "hi-datatype-operation";
 </script>
 <script lang="ts" setup>
 defineOptions({
   name: "HiSelect",
 });
+// const options_prop = defineProps({
+//   options: {
+//     type: Object as PropType<HiSelectOptionsConfig<any>>,
+//     required: true,
+//   },
+// })
 const props = defineProps({
-  ...SelectProps,
+  ...selectProps,
   modelValue: {
     type: [String, Number, Array<string | number>],
     default: [],
   },
-  options: {
+  optionsConfig: {
     type: Object as PropType<HiSelectOptionsConfig<any>>,
     required: true,
   },
@@ -60,6 +72,7 @@ const props = defineProps({
     default: false,
   },
 });
+const {optionsConfig} = toRefs(props);
 const emit = defineEmits(["update:modelValue"]);
 const { uselabel } = useAttrs();
 const SelectModelValue = computed({
@@ -135,27 +148,27 @@ watch(
   { deep: true }
 );
 watchEffect(async () => {
-  if (props?.options?.defaultOptions) {
-    select_options.value = props.options.defaultOptions;
+  if (optionsConfig.value.defaultOptions) {
+    select_options.value = optionsConfig.value.defaultOptions;
     return;
   }
   let res = [];
-  if (props.options?.args) {
+  if (optionsConfig.value?.args) {
     if (
-      props.options.args[2] &&
-      typeof props.options.args[2] === "object" &&
-      Reflect.has(props.options.args[2], "param_key_name")
+      optionsConfig.value.args[2] &&
+      typeof optionsConfig.value.args[2] === "object" &&
+      Reflect.has(optionsConfig.value.args[2], "param_key_name")
     ) {
       const param_key_name: string = Reflect.get(
-        props.options.args[2],
+        optionsConfig.value.args[2],
         "param_key_name"
       );
       const param_value_key: string = Reflect.get(
-        props.options.args[2],
+        optionsConfig.value.args[2],
         "param_value_name"
       );
       const param_key_entries: any = Reflect.get(
-        props.options.args[2],
+        optionsConfig.value.args[2],
         "param_key_entries"
       );
       if (param_key_entries) {
@@ -163,10 +176,10 @@ watchEffect(async () => {
           const [key_name, value_name]: any = Object.entries(item)[0];
           if (
             !isUndefined(props.formData) &&
-            !isUndefined(props.options.args)
+            !isUndefined(optionsConfig.value.args)
           ) {
             const param_value: string = Reflect.get(props.formData, value_name);
-            Reflect.set(props.options.args[1], key_name, param_value);
+            Reflect.set(optionsConfig.value.args[1], key_name, param_value);
           }
         });
       }
@@ -174,21 +187,21 @@ watchEffect(async () => {
         props.formData || {},
         param_value_key
       );
-      if (!props.options.args[1]) {
-        props.options.args[1] = {};
+      if (!optionsConfig.value.args[1]) {
+        optionsConfig.value.args[1] = {};
       }
-      Reflect.set(props.options.args[1], param_key_name, param_value);
-      props.options.args[2].param_not_null_key = param_key_name;
-      res = (await useBusPost.apply(null, props.options.args)) || [];
+      Reflect.set(optionsConfig.value.args[1], param_key_name, param_value);
+      optionsConfig.value.args[2].param_not_null_key = param_key_name;
+      res = (await useBusPost.apply(null, optionsConfig.value.args)) || [];
     }
-    if (props.options.args[2]?.res_key_name) {
-      const res_key_name = Reflect.get(props.options.args[2], "res_key_name") as string;
-      Reflect.set(props.options.args[2], "onFormat", (res: any) => {
+    if (optionsConfig.value.args[2]?.res_key_name) {
+      const res_key_name = Reflect.get(optionsConfig.value.args[2], "res_key_name") as string;
+      Reflect.set(optionsConfig.value.args[2], "onFormat", (res: any) => {
         return res_key_name.includes("res.")
           ? eval(res_key_name)
           : getFieldValueByPath(res_key_name, res);
       });
-      res = (await useBusPost.apply(null, props.options.args)) || [];
+      res = (await useBusPost.apply(null, optionsConfig.value.args)) || [];
     }
     /**
      * 2024-07-01
@@ -196,7 +209,7 @@ watchEffect(async () => {
      * benchmarkPrice
      * billManageForIndex
      */
-    let [url, param, options] = props.options.args;
+    let [url, param, options] = optionsConfig.value.args;
     const request_method =
       options && Reflect.has(options, "request_method")
         ? Reflect.get(options, "request_method")
@@ -237,7 +250,7 @@ const handleCheckall = (val: CheckboxValueType) => {
     SelectModelValue.value = [];
   }
 };
-const [label_key, value_key] = props!.options!.alias || ["label", "value"];
+const [label_key, value_key] = optionsConfig.value!.alias || ["label", "value"];
 </script>
 <template>
   <el-select

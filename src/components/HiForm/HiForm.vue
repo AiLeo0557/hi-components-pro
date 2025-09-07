@@ -35,7 +35,7 @@ const props = defineProps({
     }
   },
   formData: {
-    type: Object as PropType<any>,
+    type: Object as PropType<Record<string, any>>,
     default: {}
   },
   items: {

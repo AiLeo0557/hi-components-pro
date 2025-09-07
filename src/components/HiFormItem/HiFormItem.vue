@@ -144,6 +144,9 @@ watch(
           value.value = Reflect.get(Array.isArray(key_value) ? key_value[0] : key_value, sub_key)
         }
       }
+      if (method === 'form') {
+        value.value = getFieldValueByPath(from_key, props)
+      }
     }
   },
   {
